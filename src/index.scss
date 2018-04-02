@@ -1,0 +1,32 @@
+@import "style/font/roboto";
+@import "style/variable/color";
+@import "style/variable/metric";
+@import "style/variable/typography";
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $color-background !important;
+  height: 100%;
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 1.65em;
+  font-weight: $typography-weight-normal;
+
+  @media screen and (max-width: $metric-device-breakpoint) {
+    font-size: 16px;
+  }
+}
+
+#root {
+  height: 100%;
+}

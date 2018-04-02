@@ -1,0 +1,8 @@
+{
+  "imageList": ["image/from_web/1.jpg", "image/from_web/2.jpg"],
+  "captionText": "Donec dignissim arcu ac pulvinar",
+  "titleText": "Suscipit sed est",
+  "subtitleText": "Nulla cursus tellus turpis, at eleifend nibh viverra non.",
+  "bodyText":
+    "Mauris ultrices felis vel risus ullamcorper tincidunt. Vivamus in malesuada dui. Donec dapibus sit amet tortor at fermentum. Nullam eu turpis posuere, elementum libero ut, posuere lorem."
+}

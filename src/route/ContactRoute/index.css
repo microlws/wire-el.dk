@@ -1,0 +1,26 @@
+.ContactRoute {
+  padding-top: 48px; }
+  .ContactRoute:first-child {
+    padding-top: 0; }
+  @media screen and (max-width: 800px) {
+    .ContactRoute {
+      padding-top: 20px; } }
+  .ContactRoute__inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px; }
+  .ContactRoute__fields {
+    margin-top: 24px !important; }
+  .ContactRoute__field {
+    margin-bottom: 24px !important; }
+    .ContactRoute__field-name {
+      display: block !important; }
+    .ContactRoute__field-email {
+      margin-right: 16px !important; }
+    .ContactRoute__field-aboutSubject {
+      display: block !important; }
+  .ContactRoute__fieldtitle {
+    margin-top: 24px !important; }
+  @media screen and (min-width: 800px) {
+    .ContactRoute__field-aboutSubject {
+      width: 400px !important; } }

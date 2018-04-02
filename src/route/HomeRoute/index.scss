@@ -1,0 +1,76 @@
+@import "style/variable/metric";
+@import "style/abstract/inner";
+@import "style/abstract/panel";
+
+.HomeRoute {
+  display: flex;
+  flex-direction: column;
+  margin-top: $metric-panel-spacing * -1;
+
+  @media screen and (max-width: $metric-device-breakpoint) {
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+
+  &__megatron {
+    @include panel;
+    padding-top: 0;
+
+    &-media-slide {
+      background-size: cover;
+      background-position-y: 25%;
+      padding-top: 26.25%;
+      min-height: 200px;
+    }
+  }
+
+  &__promotion {
+    @include panel;
+
+    &-inner {
+      @include inner;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-card {
+      margin-bottom: $metric-panel-spacing-device;
+    }
+
+    @media screen and (min-width: $metric-device-breakpoint) {
+      &-inner {
+        flex-direction: row;
+      }
+
+      &-card {
+        flex-basis: 33.3333%;
+        margin-bottom: 0;
+
+        &:nth-child(1) {
+          margin-right: $metric-panel-spacing / 4;
+        }
+
+        &:nth-child(2) {
+          margin: 0 ($metric-panel-spacing / 4);
+        }
+
+        &:nth-child(3) {
+          margin-left: $metric-panel-spacing / 4;
+        }
+      }
+    }
+  }
+
+  &__content {
+    @include panel;
+
+    &-inner {
+      @include inner;
+    }
+
+    @media screen and (max-width: $metric-device-breakpoint) {
+      padding-top: 0;
+      padding-bottom: $metric-panel-spacing-device;
+    }
+  }
+}

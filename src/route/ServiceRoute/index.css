@@ -1,0 +1,19 @@
+.ServiceRoute {
+  padding-top: 48px; }
+  .ServiceRoute:first-child {
+    padding-top: 0; }
+  @media screen and (max-width: 800px) {
+    .ServiceRoute {
+      padding-top: 20px; } }
+  .ServiceRoute__inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px; }
+  .ServiceRoute__title {
+    text-align: center; }
+  .ServiceRoute__services-column {
+    display: flex;
+    flex-direction: row; }
+  .ServiceRoute__services-item {
+    flex-grow: 1;
+    flex-basis: 33.3333%; }

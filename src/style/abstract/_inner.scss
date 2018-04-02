@@ -1,0 +1,7 @@
+@import "style/variable/metric";
+
+@mixin inner($width: $metric-max-width) {
+  margin: 0 auto;
+  max-width: $width;
+  padding: 0 $metric-panel-spacing-device;
+}

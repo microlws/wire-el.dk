@@ -1,0 +1,11 @@
+.OfferRoute {
+  padding-top: 48px; }
+  .OfferRoute:first-child {
+    padding-top: 0; }
+  @media screen and (max-width: 800px) {
+    .OfferRoute {
+      padding-top: 20px; } }
+  .OfferRoute__inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px; }

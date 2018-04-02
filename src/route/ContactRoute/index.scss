@@ -1,0 +1,41 @@
+@import "style/abstract/inner";
+@import "style/abstract/panel";
+@import "style/variable/metric";
+
+.ContactRoute {
+  @include panel;
+
+  &__inner {
+    @include inner;
+  }
+
+  &__fields {
+    margin-top: $metric-spacing * 3 !important;
+  }
+
+  &__field {
+    margin-bottom: $metric-spacing * 3 !important;
+
+    &-name {
+      display: block !important;
+    }
+
+    &-email {
+      margin-right: $metric-spacing * 2 !important;
+    }
+
+    &-aboutSubject {
+      display: block !important;
+    }
+  }
+
+  &__fieldtitle {
+    margin-top: $metric-spacing * 3 !important;
+  }
+
+  @media screen and (min-width: $metric-device-breakpoint) {
+    &__field-aboutSubject {
+      width: 400px !important;
+    }
+  }
+}

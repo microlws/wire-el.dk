@@ -1,0 +1,1 @@
+export const APP_WIDTH_UPDATE = "APP_WIDTH_UPDATE";

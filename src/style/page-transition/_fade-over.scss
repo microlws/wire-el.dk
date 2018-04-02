@@ -1,0 +1,62 @@
+@mixin preTransition {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@mixin fadeAnimation($timing: 350ms) {
+  animation-duration: $timing;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@mixin page-transition-fade-over {
+  .fade-over {
+    &-enter {
+      &-active {
+        @include preTransition;
+        @include fadeAnimation(350ms);
+        animation-name: fadeIn;
+        z-index: 1;
+      }
+
+      &-done {
+      }
+    }
+
+    &-exit {
+      &-active {
+        @include preTransition;
+        @include fadeAnimation(150ms);
+        animation-name: fadeOut;
+        z-index: 100;
+      }
+
+      &-done {
+      }
+    }
+  }
+}

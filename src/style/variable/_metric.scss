@@ -1,0 +1,9 @@
+$gutter-unit: 4px;
+
+$metric-device-breakpoint: 800px;
+$metric-max-width: $metric-device-breakpoint * 1.5;
+
+$metric-spacing: $gutter-unit * 2;
+
+$metric-panel-spacing: $metric-spacing * 6;
+$metric-panel-spacing-device: $metric-spacing * 2.5;

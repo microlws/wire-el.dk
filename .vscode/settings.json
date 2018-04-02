@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+    "__error": "Not found",
+    "**/yarn-error": true,
+    "**/yarn-error.*": true,
+    "**/yarn": true,
+    "**/yarn.*": true,
+    "**/node_modules": true,
+    "**/node_modules.*": true,
+    "src/**/*.css": true
+  }
+}

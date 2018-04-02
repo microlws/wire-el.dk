@@ -1,0 +1,56 @@
+.AppHeader {
+  display: flex;
+  flex-direction: row; }
+  .AppHeader__brand {
+    display: flex;
+    flex-direction: row; }
+  .AppHeader__title {
+    padding-top: 9px;
+    margin-left: 8px; }
+    .AppHeader__title-company {
+      transition: all 300ms ease-in-out;
+      font-size: 27px;
+      font-weight: 700;
+      line-height: 27px; }
+    .AppHeader__title-slogan {
+      transition: all 300ms ease-in-out;
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 19px; }
+  .AppHeader__logo {
+    background-image: url("/image/logo.png");
+    background-size: cover;
+    width: 64px;
+    height: 64px;
+    transition: all 300ms ease-in-out; }
+  .AppHeader__info {
+    flex-grow: 1;
+    text-align: right;
+    padding-top: 13px;
+    transition: all 300ms ease-in-out; }
+  .AppHeader__button {
+    transition: all 300ms ease-in-out;
+    margin-left: 8px; }
+    .AppHeader__button-icon {
+      margin-right: 8px; }
+  @media screen and (max-width: 800px) {
+    .AppHeader__logo {
+      width: 48px;
+      height: 48px; }
+    .AppHeader__button {
+      min-width: inherit !important; }
+      .AppHeader__button-icon {
+        margin-right: 0; }
+    .AppHeader__title {
+      padding-top: 8px;
+      margin-left: 8px; }
+      .AppHeader__title-company {
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 21px; }
+      .AppHeader__title-slogan {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 12px; }
+    .AppHeader__info {
+      padding-top: 3px; } }

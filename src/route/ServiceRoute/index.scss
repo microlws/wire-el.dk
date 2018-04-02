@@ -1,0 +1,26 @@
+@import "style/abstract/panel";
+@import "style/abstract/inner";
+
+.ServiceRoute {
+  @include panel;
+
+  &__inner {
+    @include inner;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__services {
+    &-column {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-item {
+      flex-grow: 1;
+      flex-basis: 33.3333%;
+    }
+  }
+}

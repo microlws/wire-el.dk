@@ -1,0 +1,13 @@
+@import "style/variable/metric";
+
+@mixin panel {
+  padding-top: $metric-panel-spacing;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  @media screen and (max-width: $metric-device-breakpoint) {
+    padding-top: $metric-panel-spacing-device;
+  }
+}

@@ -1,0 +1,10 @@
+@import "style/abstract/panel";
+@import "style/abstract/inner";
+
+.OfferRoute {
+  @include panel;
+
+  &__inner {
+    @include inner;
+  }
+}

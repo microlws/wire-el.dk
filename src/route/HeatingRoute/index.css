@@ -1,0 +1,11 @@
+.HeatingRoute {
+  padding-top: 48px; }
+  .HeatingRoute:first-child {
+    padding-top: 0; }
+  @media screen and (max-width: 800px) {
+    .HeatingRoute {
+      padding-top: 20px; } }
+  .HeatingRoute__inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px; }
