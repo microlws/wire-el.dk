@@ -4,6 +4,7 @@ import SwipeableViews from "react-swipeable-views"
 import PromotionCard from "component/PromotionCard"
 import promotionData from "./promotion.json"
 import contentData from "./content.json"
+import getDeviceImage from "util/getDeviceImage"
 import "./index.css"
 
 const HomeRoute = ({ width, deviceBreakpoint }) => {
@@ -16,7 +17,7 @@ const HomeRoute = ({ width, deviceBreakpoint }) => {
               <div
                 className="HomeRoute__megatron-media-slide"
                 key={`slider-${image}`}
-                style={{ backgroundImage: `url("${image}")` }}
+                style={{ backgroundImage: `url("${getDeviceImage(image, width)}")` }}
               />
             ))}
           </SwipeableViews>
@@ -31,7 +32,7 @@ const HomeRoute = ({ width, deviceBreakpoint }) => {
       </div>
       <div className="HomeRoute__content">
         <div className="HomeRoute__content-inner">
-          <PromotionCard {...contentData} className="HomeRoute__content-card" />
+          <PromotionCard {...contentData} mediaAspect={21} className="HomeRoute__content-card" />
         </div>
       </div>
     </div>
