@@ -18,10 +18,6 @@ const getDeviceImage = (image, width, size) => {
       break
   }
 
-  if (size) {
-    console.log(size, endSize, image)
-  }
-
   return `${leadingPath}_${endSize}.${extension}`
 }
 
