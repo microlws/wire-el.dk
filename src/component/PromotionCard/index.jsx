@@ -8,26 +8,26 @@ import Button from "material-ui/Button"
 import getDeviceImage from "util/getDeviceImage"
 import "./index.css"
 
-const createMediaViewInner = (className, image, aspectRatio, width) => (
+const createMediaViewInner = (className, image, aspectRatio, width, mediaSize) => (
   <div
     className={`${className}__media-slide PromotionCard__media-slide`}
-    style={{ backgroundImage: `url("${getDeviceImage(image, width)}")`, paddingTop: `${aspectRatio}%` }}
+    style={{ backgroundImage: `url("${getDeviceImage(image, width, mediaSize)}")`, paddingTop: `${aspectRatio}%` }}
     key={`slider-${image}`}
   />
 )
 
-const createMediaView = (className, imageList, mediaAspect, width) => {
+const createMediaView = (className, imageList, mediaAspect, width, mediaSize) => {
   let mediaView
   const aspectRatio = 9 / mediaAspect * 100
 
   if (imageList.length > 1) {
     mediaView = (
       <SwipeableViews enableMouseEvents className={`${className}__media PromotionCard__media`}>
-        {imageList.map(image => createMediaViewInner(className, image, aspectRatio, width))}
+        {imageList.map(image => createMediaViewInner(className, image, aspectRatio, width, mediaSize))}
       </SwipeableViews>
     )
   } else {
-    mediaView = createMediaViewInner(className, imageList[0], aspectRatio)
+    mediaView = createMediaViewInner(className, imageList[0], aspectRatio, width, mediaSize)
   }
 
   return mediaView
@@ -44,6 +44,7 @@ const PromotionCard = ({
   imageList,
   imageTitle,
   mediaAspect,
+  mediaSize,
   onButtonClick,
   subtitleText,
   titleText,
@@ -52,7 +53,7 @@ const PromotionCard = ({
   <Card className={`${className} PromotionCard`}>
     <CardMedia
       image={getDeviceImage(imageList[0], width)}
-      component={() => createMediaView(className, imageList, mediaAspect, width)}
+      component={() => createMediaView(className, imageList, mediaAspect, width, mediaSize)}
     />
     <CardContent>
       <Typography gutterBottom color="textSecondary">
@@ -89,6 +90,7 @@ PromotionCard.defaultProps = {
   imageList: [],
   imageTitle: "",
   mediaAspect: 16,
+  mediaSize: "large",
   onButtonClick: () => {},
   subtitleText: "",
   titleText: "",
@@ -103,6 +105,7 @@ PromotionCard.propTypes = {
   imageList: PropTypes.array,
   imageTitle: PropTypes.string,
   mediaAspect: PropTypes.number,
+  mediaSize: PropTypes.string,
   onButtonClick: PropTypes.func,
   subtitleText: PropTypes.string,
   titleText: PropTypes.string,

@@ -26,7 +26,7 @@ class App extends React.Component {
     this.addFixedClass = this.addFixedClass.bind(this)
   }
 
-  componentDidMount() {
+  componentWillMount() {
     window.addEventListener("resize", this.handleResize)
     window.addEventListener("scroll", this.handleScroll)
 

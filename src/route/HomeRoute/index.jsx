@@ -25,14 +25,20 @@ const HomeRoute = ({ width, deviceBreakpoint }) => {
       )}
       <div className="HomeRoute__promotion">
         <div className="HomeRoute__promotion-inner">
-          <PromotionCard {...promotionData[0]} className="HomeRoute__promotion-card" />
-          <PromotionCard {...promotionData[1]} className="HomeRoute__promotion-card" />
-          <PromotionCard {...promotionData[2]} className="HomeRoute__promotion-card" />
+          <PromotionCard {...promotionData[0]} className="HomeRoute__promotion-card" mediaSize="small" />
+          <PromotionCard {...promotionData[1]} className="HomeRoute__promotion-card" mediaSize="small" />
+          <PromotionCard {...promotionData[2]} className="HomeRoute__promotion-card" mediaSize="small" />
         </div>
       </div>
       <div className="HomeRoute__content">
         <div className="HomeRoute__content-inner">
-          <PromotionCard {...contentData} mediaAspect={21} className="HomeRoute__content-card" />
+          <PromotionCard
+            {...contentData}
+            imageList={["image/promotion/8.jpg"]}
+            mediaAspect={21}
+            className="HomeRoute__content-card"
+            mediaSize="large"
+          />
         </div>
       </div>
     </div>
