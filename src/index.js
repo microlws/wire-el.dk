@@ -2,7 +2,6 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { Provider } from "react-redux"
 import { MuiThemeProvider, createMuiTheme } from "material-ui/styles"
-import domready from "domready"
 import App from "container/App"
 import configureStore from "store/configure"
 import history from "store/history"
@@ -27,15 +26,13 @@ const theme = createMuiTheme({
   },
 })
 
-domready(
-  ReactDOM.render(
-    <Provider store={store}>
-      <MuiThemeProvider theme={theme}>
-        <App />
-      </MuiThemeProvider>
-    </Provider>,
-    document.getElementById("root")
-  )
+ReactDOM.render(
+  <Provider store={store}>
+    <MuiThemeProvider theme={theme}>
+      <App />
+    </MuiThemeProvider>
+  </Provider>,
+  document.getElementById("root")
 )
 
 registerServiceWorker()

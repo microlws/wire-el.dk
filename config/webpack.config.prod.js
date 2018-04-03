@@ -240,12 +240,6 @@ module.exports = {
     // Enable scope hoisting
     new webpack.optimize.ModuleConcatenationPlugin(),
 
-    // Create Vendor Chunk
-    new webpack.optimize.CommonsChunkPlugin({
-      name: "vendor",
-      minChunks: ({ resource }) => resource && resource.indexOf("node_modules") >= 0 && resource.match(/\.js$/),
-    }),
-
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
       inject: "body",
@@ -268,7 +262,9 @@ module.exports = {
       head: ".(css)$",
     }),
 
-    new ScriptExtHtmlWebpackPlugin(),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: "async",
+    }),
 
     // Makes some environment variables available to the JS code, for example:
     // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.
